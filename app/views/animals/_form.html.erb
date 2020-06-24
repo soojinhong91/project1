@@ -1,21 +1,36 @@
-<%= form_for @animal do |f| %>
-  <%= f.label :species %>
-  <%= f.text_field :species, :required => true, :autofocus => true %>
+<div class="col-md-4 offset-md-4">
+  <%= form_for @animal do |f| %>
 
-  <%= f.label :age %>
-  <%= f.text_field :age %>
+    <div class="form-group">
+      <%= f.label :species %>
+      <%= f.text_field :species, :required => true, :autofocus => true %>
+    </div>
 
-  <%= f.label :sex %>
-  <%= f.text_field :sex %>
+    <div class="form-group">
+      <%= f.label :age %>
+      <%= f.text_field :age %>
+    </div>
 
-  <%= f.label :color %>
-  <%= f.text_field :color %>
+    <div class="form-group">
+      <%= f.label :sex %>
+      <%= f.text_field :sex %>
+    </div>
 
-  <%= f.label :image %>
-  <%= f.text_field :image %>
+    <div class="form-group">
+      <%= f.label :color %>
+      <%= f.text_field :color %>
+    </div>
 
-  <%= f.label :center_id %>
-  <%= f.select :center_id, Center.pluck(:name, :id), :include_blank => true %>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.text_field :image %>
+    </div>
 
-  <%= f.submit %>
-<% end %>
+    <div class="form-group">
+      <%= f.label :center_id %>
+      <%= f.select :center_id, Center.pluck(:name, :id), :include_blank => true %>
+    </div>
+
+    <%= f.submit nil, :class => 'btn btn-outline-dark' %>
+  <% end %>
+</div>

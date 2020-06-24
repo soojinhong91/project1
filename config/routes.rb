@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-  resources :animals, shallow: true do
-    resources :services
-  end
+  resources :animals
   resources :centers
 end

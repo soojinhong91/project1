@@ -1,22 +1,32 @@
-<h1>Sign Up</h1>
+<div class="col-md-6 offset-md-3">
 
-<% if @user.errors.any? %>
-  <ol>
-    <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ol>
-<% end %>
+  <h1>Sign Up</h1>
 
-<%= form_for @user do |f| -%>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+  <% if @user.errors.any? %>
+    <ol>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ol>
+  <% end %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= form_for @user do |f| %>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, :class => 'form-control' %>
+    </div>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, :class => 'form-control' %>
+    </div>
 
-  <%= f.submit "Sign Up" %>
-<% end %>
+    <div class="form-group">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, :class => 'form-control' %>
+    </div>
+
+    <%= f.submit "Sign Up", :class => 'btn btn-outline-dark' %>
+  <% end %>
+
+</div>

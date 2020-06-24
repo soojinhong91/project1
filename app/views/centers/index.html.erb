@@ -1,7 +1,13 @@
-<h1>All Centers</h1>
+<div class="col-md-10 offset-md-1">
+  <h1>Partners of The Paw Button</h1>
 
-<%= link_to "Add Center", new_center_path %>
+  <nav>
+    <%= link_to "Add Center", new_center_path, :class =>"index_nav" %>
+  </nav>
 
-<% @centers.each do |center| %>
-  <%= link_to center.name, center %>
-<% end %>
+  <div class="list-group">
+    <% @centers.each do |center| %>
+      <%= link_to center.name, center, :class =>"list-group-item" %>
+    <% end %>
+  </div>
+</div>

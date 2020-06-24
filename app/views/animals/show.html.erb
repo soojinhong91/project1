@@ -1,25 +1,30 @@
-<h1><%= @animal.species %></h1>
+<div class="col-md-10 offset-md-2">
 
-<%= image_tag @animal.image, :class =>'feature', :alt => '@animal.species' %>
+ <div class="row">
+    <div class="col-6 col-sm-4">
+       <%= image_tag @animal.image, :class =>'feature', :alt => '@animal.species' %>
+    </div>
 
-<ul>
-  <li>Type: <%= @animal.species %></li>
-  <li>Age: <%= @animal.age %></li>
-  <li>Sex: <%= @animal.sex %></li>
-  <li>Color: <%= @animal.color %></li>
+    <div class="col-6 col-sm-6">
+      <ul>
+        <li class="title list-group-item"><%= @animal.species %></li>
+        <li class="list-group-item">Age: <%= @animal.age %></li>
+        <li class="list-group-item">Sex: <%= @animal.sex %></li>
+        <li class="list-group-item">Color: <%= @animal.color %></li>
 
-  <div class="center_info">
-    <% if @animal.center.present? %>
-    <li>Center: <%= link_to @animal.center.name, @animal.center %></li>
-    <li>Contact: <%= number_to_phone @animal.center.contact, :area_code => true %></li>
-    <li>Address: <%= @animal.center.address %></li>
-    <% end %>
-
+        <div class="center_info">
+          <% if @animal.center.present? %>
+          <li class="list-group-item">Center: <%= link_to @animal.center.name, @animal.center %></li>
+          <li class="list-group-item">Contact: <%= number_to_phone @animal.center.contact, :area_code => true %></li>
+          <li class="list-group-item">Address: <%= @animal.center.address %></li>
+          <% end %>
+        </div>
+      </ul>
+    </div>
   </div>
 
-</ul>
-
-<div class="controls">
-  <%= link_to 'Edit Info', edit_animal_path(@animal) %>
-  <%= link_to "Delete this #{ @animal.species }", animal_path(@animal), :method => 'delete' %>
+  <div class="controls">
+    <%= link_to 'Edit Info', edit_animal_path(@animal) %>
+    <%= link_to "Delete this #{ @animal.species }", animal_path(@animal), :method => 'delete' %>
+  </div>
 </div>

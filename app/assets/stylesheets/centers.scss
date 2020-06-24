@@ -1,3 +1,19 @@
 // Place all the styles related to the Centers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.index_nav {
+  padding: 1em;
+  color: #212529;
+}
+
+.list-group {
+  margin-top: 1em;
+}
+
+.list-group a, .controls a {
+  color: #212529;
+}
+
+.show_main ul {
+  display:block ;
+}

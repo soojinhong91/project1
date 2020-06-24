@@ -1,12 +1,21 @@
-<%= form_for @center do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, :required => true, :autofocus => true %>
+<div class="col-md-4 offset-md-4">
+  <%= form_for @center do |f| %>
 
-  <%= f.label :contact %>
-  <%= f.telephone_field :contact, :placeholder => "0234567890"%>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, :required => true, :autofocus => true %>
+    </div>
 
-  <%= f.label :address %>
-  <%= f.text_field :address %>
+    <div class="form-group">
+      <%= f.label :contact %>
+      <%= f.telephone_field :contact, :placeholder => "0234567890"%>
+    </div>
 
-  <%= f.submit %>
-<% end %>
+    <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+    </div>
+
+    <%= f.submit nil, :class => 'btn btn-outline-dark'  %>
+  <% end %>
+</div>

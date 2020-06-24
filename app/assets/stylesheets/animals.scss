@@ -1,3 +1,67 @@
 // Place all the styles related to the Animals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263343;
+  color: #e8e8e8;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.nav_menu a {
+  color: #e8e8e8;
+  padding: 0 1em;
+}
+
+.nav_logo a, .nav_login a {
+  color: #e8e8e8;
+  padding: 0 0.5em;
+}
+
+.nav_logo i {
+  color: #d49466;
+}
+
+.thumb {
+  width: 13em;
+  margin-top: 1em;
+}
+
+.index_nav {
+  padding: 1em;
+  color: #212529;
+}
+
+.feature {
+  width: 17em;
+}
+
+.row {
+  align-items: center;
+}
+
+.list-group{
+  display: inline-block;
+}
+
+ul {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 0.9em;
+}
+
+.controls {
+  margin-top: 1em;
+}
+
+.title{
+  font-size: 1.5em;
+  list-style-type: none;
+}
+
+.controls a {
+  padding: 0 1.5em;
+}

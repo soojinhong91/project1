@@ -1,9 +1,13 @@
-<h1>All Animals</h1>
+<div class="col-md-10 offset-md-1">
+  <h1>All Animals</h1>
 
-<%= link_to 'Cats', animals_path(:animal_species => 'Cats') %>
+  <nav>
+    <%= link_to 'Cats', animals_path(:animal_species => 'Cat'), :class =>"index_nav" %>
+    <%= link_to 'Dogs', animals_path(:animal_species => 'Dog'), :class =>"index_nav" %>
+    <%= link_to 'Add Animal', new_animal_path, :class =>"index_nav" %>
+  </nav>
 
-<%= link_to "Add Animal", new_animal_path %>
-
-<% @animals.each do |animal| %>
-  <%= link_to image_tag(animal.image, :class => 'thumb', :alt => animal.species), animal %>
-<% end %>
+  <% @animals.each do |animal| %>
+    <%= link_to image_tag(animal.image, :class => 'thumb', :alt => animal.species), animal %>
+  <% end %>
+</div>

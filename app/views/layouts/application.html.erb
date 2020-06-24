@@ -7,34 +7,39 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <nav>
-      <%= link_to 'Home', root_path %>
+    <div class="container">
 
-      <% if @current_user.present? %>
-        <% if @current_user.admin? %>
-          <%= link_to 'All users', users_path %>
-        <% end %>
-        <%= link_to "Log out #{ @current_user.email } ", login_path, :method => 'delete' %>
-        You are logged in as <%= @current_user.email %>
-      <% else %>
-        <%= link_to 'Sign up', new_user_path %>
-        <%= link_to 'Sign in', login_path %>
-      <% end %>
+      <nav class="navbar">
+        <div class="nav_logo">
+          <i class="fas fa-paw"></i>
+          <%= link_to 'The Paws Button', root_path %>
+        </div>
 
-    </nav>
+        <div class="nav_menu">
+          <%= link_to 'Home', root_path %>
+          <%= link_to 'Animals', animals_path %>
+          <%= link_to 'Centers', centers_path %>
+        </div>
 
-    <aside>
-      <%= link_to 'Animals', animals_path %>
+        <div class="nav_login">
+          <% if @current_user.present? %>
+            <% if @current_user.admin? %>
+              <%= link_to 'All users', users_path %>
+            <% end %>
+            <%= link_to "Log out #{ @current_user.email } ", login_path, :method => 'delete' %>
+            You are logged in as <%= @current_user.email %>
+          <% else %>
+            <%= link_to 'Sign up', new_user_path %>
+            <%= link_to 'Sign in', login_path %>
+          <% end %>
+        </div>
+      </nav>
 
-
-        <li>Cats</li>
-        <li>Dogs</li>
-      <%= link_to 'Centers', centers_path %>
-    </aside>
-
-    <%= yield %>
+      <%= yield %>
+    </div>
   </body>
 </html>
