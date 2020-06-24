@@ -1,0 +1,7 @@
+<h1>All Centers</h1>
+
+<%= link_to "Add Center", new_center_path %>
+
+<% @centers.each do |center| %>
+  <%= link_to center.name, center %>
+<% end %>

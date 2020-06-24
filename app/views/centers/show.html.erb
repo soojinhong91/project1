@@ -1,0 +1,16 @@
+<h1><%= @center.name %></h1>
+
+<ul>
+  <li>Name: <%= @center.name %></li>
+  <li>Contact: <%= number_to_phone @center.contact, :area_code => true %></li>
+  <li>Address: <%= @center.address %></li>
+</ul>
+
+<% @center.animals.each do |animal| %>
+  <%= link_to image_tag(animal.image, :class => 'thumb'), animal %>
+<% end %>
+
+<div class="controls">
+  <%= link_to 'Edit Center Info', edit_center_path(@center.id) %>
+  <%= link_to 'Delete this Center', center_path(@center.id), :method => 'delete' %>
+</div>

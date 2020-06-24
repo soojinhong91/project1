@@ -1,0 +1,12 @@
+<%= form_for @center do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true, :autofocus => true %>
+
+  <%= f.label :contact %>
+  <%= f.telephone_field :contact, :placeholder => "0234567890"%>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <%= f.submit %>
+<% end %>

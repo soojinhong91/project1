@@ -1,0 +1,9 @@
+<h1>All Animals</h1>
+
+<%= link_to 'Cats', animals_path(:animal_species => 'Cats') %>
+
+<%= link_to "Add Animal", new_animal_path %>
+
+<% @animals.each do |animal| %>
+  <%= link_to image_tag(animal.image, :class => 'thumb', :alt => animal.species), animal %>
+<% end %>

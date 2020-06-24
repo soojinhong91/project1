@@ -1,0 +1,25 @@
+<h1><%= @animal.species %></h1>
+
+<%= image_tag @animal.image, :class =>'feature', :alt => '@animal.species' %>
+
+<ul>
+  <li>Type: <%= @animal.species %></li>
+  <li>Age: <%= @animal.age %></li>
+  <li>Sex: <%= @animal.sex %></li>
+  <li>Color: <%= @animal.color %></li>
+
+  <div class="center_info">
+    <% if @animal.center.present? %>
+    <li>Center: <%= link_to @animal.center.name, @animal.center %></li>
+    <li>Contact: <%= number_to_phone @animal.center.contact, :area_code => true %></li>
+    <li>Address: <%= @animal.center.address %></li>
+    <% end %>
+
+  </div>
+
+</ul>
+
+<div class="controls">
+  <%= link_to 'Edit Info', edit_animal_path(@animal) %>
+  <%= link_to "Delete this #{ @animal.species }", animal_path(@animal), :method => 'delete' %>
+</div>

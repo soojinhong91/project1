@@ -1,0 +1,21 @@
+<%= form_for @animal do |f| %>
+  <%= f.label :species %>
+  <%= f.text_field :species, :required => true, :autofocus => true %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <%= f.label :sex %>
+  <%= f.text_field :sex %>
+
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+
+  <%= f.label :center_id %>
+  <%= f.select :center_id, Center.pluck(:name, :id), :include_blank => true %>
+
+  <%= f.submit %>
+<% end %>
