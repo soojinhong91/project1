@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_06_22_065040) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "animals", force: :cascade do |t|
     t.text "species"
     t.text "age"
