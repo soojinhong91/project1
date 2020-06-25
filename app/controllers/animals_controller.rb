@@ -13,7 +13,6 @@ class AnimalsController < ApplicationController
     if params[:file].present?
       res = Cloudinary::Uploader.upload(params[:file])
       animal.image = res["public_id"]
-
     end
     animal.save
     redirect_to animal

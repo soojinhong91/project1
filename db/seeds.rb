@@ -4,10 +4,10 @@ u2 = User.create :email => 'def@ga.co', :password => 'chicken', :admin => true
 puts "#{ User.count } users"
 
 Animal.destroy_all
-a1 = Animal.create :species => 'Cat', :age => '2 Years and 9 Months', :sex => 'Male', :color => 'Black', :image => '/assets/cat1.jpg'
-a2 = Animal.create :species => 'Cat', :age => '5 Months', :sex => 'Female', :color => 'Orange', :image => '/assets/cat2.jpg'
-a3 = Animal.create :species => 'Dog', :age => '11 Year', :sex => 'Male', :color => 'Black', :image => '/assets/dog1.jpg'
-a4 = Animal.create :species => 'Dog', :age => '10 Months', :sex => 'Male', :color => 'White', :image => '/assets/dog2.jpg'
+a1 = Animal.create :species => 'Cat', :age => '2 Years and 9 Months', :sex => 'Male', :color => 'Black', :image => 'cat1.jpg'
+a2 = Animal.create :species => 'Cat', :age => '5 Months', :sex => 'Female', :color => 'Orange', :image => 'cat2.jpg'
+a3 = Animal.create :species => 'Dog', :age => '11 Year', :sex => 'Male', :color => 'Black', :image => 'dog1.jpg'
+a4 = Animal.create :species => 'Dog', :age => '10 Months', :sex => 'Male', :color => 'White', :image => 'dog2.jpg'
 puts "#{ Animal.count } animals"
 
 Center.destroy_all

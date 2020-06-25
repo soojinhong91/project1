@@ -4,7 +4,7 @@
   <nav>
     <%= link_to 'Cats', animals_path(:animal_species => 'Cat'), :class =>"index_nav" %>
     <%= link_to 'Dogs', animals_path(:animal_species => 'Dog'), :class =>"index_nav" %>
-    <%= link_to 'Add Animal', new_animal_path, :class =>"index_nav" %>
+    <%= link_to 'Add Animal', new_animal_path, :class => "index_nav" %>
   </nav>
 
   <% @animals.each do |animal| %>
