@@ -1,24 +1,36 @@
-# README
+# Project1-The Paws Button
+This is the second project completed as part of a Software Engineer Immersive course at GA Sydney. The purpose of this project was to build a web application from scratch, based on basic back-end knowledge such as CRUD and database.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+'The Paws Button' is a web application where animal rescue centres can sign up and advertise animals they have available for adoption. Users can also sign up and browse the adoptable animals, or get information about the animal rescue centres.
 
-Things you may want to cover:
+[Play Demo Here:](https://project1-pets.herokuapp.com/)
 
-* Ruby version
+## Table of contents
+* [Technologies](#technologies)
+* [Try out](#try-out)
+* [Features](#features)
+* [Inspiration](#inspiration)
 
-* System dependencies
+## Technologies
+* Ruby 2.7.1
+* Rails 5.2.4.3
+* PostgreSQL
+* Bcrypt
+* Bootstrap
+* Cloudinary
+* Heroku
 
-* Configuration
+## Try out
+Here's the [link to try out](https://project1-pets.herokuapp.com/)
 
-* Database creation
+## Features
+List of features ready and TODOs for future development
+* Rails CRUD
+* User login : Authentication/Sessions
+* Heroku Deployment
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To-do list:
+* Hide New/Edit/Delete links from general users and show only for the admin account
+* Adding APIs: Such as Google Map API for the centre location, PetRescue API for database
+* Show animal list based on species
+* My favourite animal list for individual user
