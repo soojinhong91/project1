@@ -9,7 +9,6 @@ This is the second project completed as part of a Software Engineer Immersive co
 * [Technologies](#technologies)
 * [Try out](#try-out)
 * [Features](#features)
-* [Inspiration](#inspiration)
 
 ## Technologies
 * Ruby 2.7.1
