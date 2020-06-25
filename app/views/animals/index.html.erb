@@ -8,6 +8,6 @@
   </nav>
 
   <% @animals.each do |animal| %>
-    <%= link_to image_tag(animal.image, :class => 'thumb', :alt => animal.species), animal %>
+    <%= link_to cl_image_tag(animal.image, :class => 'thumb', :alt => animal.species), animal %>
   <% end %>
 </div>
