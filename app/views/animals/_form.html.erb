@@ -1,5 +1,5 @@
 <div class="col-md-4 offset-md-4">
-  <%= form_for @animal do |f| %>
+  <%= form_for(@animal, :html => {:multipart => true}) do |f| %>
 
     <div class="form-group">
       <%= f.label :species %>
@@ -23,7 +23,7 @@
 
     <div class="form-group">
       <%= f.label :image %>
-      <%= f.file_field :image %>
+      <%= f.cl_image_upload :image %>
     </div>
 
     <div class="form-group">

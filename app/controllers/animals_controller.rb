@@ -30,6 +30,7 @@ class AnimalsController < ApplicationController
       animal.image = res["public_id"]
       animal.save
     end
+
     redirect_to animal
   end
 
