@@ -25,6 +25,11 @@ class AnimalsController < ApplicationController
   def update
     animal = Animal.find params[:id]
     animal.update animal_params
+    if params[:file].present?
+      res = Cloudinary::Uploader.upload(params[:file])
+      animal.image = res["public_id"]
+      animal.save
+    end
     redirect_to animal
   end
 
