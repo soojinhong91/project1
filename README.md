@@ -3,7 +3,7 @@ This is the second project completed as part of a Software Engineer Immersive co
 
 'The Paws Button' is a web application where animal rescue centres can sign up and advertise animals they have available for adoption. Users can also sign up and browse the adoptable animals, or get information about the animal rescue centres.
 
-[Play Demo Here:](https://project1-pets.herokuapp.com/)
+[Play Demo Here](https://project1-pets.herokuapp.com/)
 
 ## Table of contents
 * [Technologies](#technologies)
