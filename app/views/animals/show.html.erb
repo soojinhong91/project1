@@ -24,7 +24,11 @@
   </div>
 
   <div class="controls">
-    <%= link_to 'Edit Info', edit_animal_path(@animal) %>
-    <%= link_to "Delete this #{ @animal.species }", animal_path(@animal), :method => 'delete' %>
+    <% if @current_user.present? %>
+      <% if @current_user.admin? %>
+        <%= link_to 'Edit Info', edit_animal_path(@animal) %>
+        <%= link_to "Delete this #{ @animal.species }", animal_path(@animal), :method => 'delete' %>
+      <% end %>
+    <% end %>
   </div>
 </div>

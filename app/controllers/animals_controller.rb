@@ -1,7 +1,11 @@
 class AnimalsController < ApplicationController
 
   def index
-    @animals = Animal.all
+    if params[:animal_species].present?
+      @animals = Animal.where :species => params[:animal_species]
+    else
+      @animals = Animal.all
+    end 
   end
 
   def new

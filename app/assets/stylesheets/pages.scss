@@ -4,24 +4,38 @@
 
 .home_container {
   width: 1110px;
-  height: 100vh;
+  height: 90vh;
   margin: 0;
   background:image-url("bg.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background-size: contain;
   align-items: center;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .home_message {
-  width: 600px;
-  height: 350px;
+  max-width: 600px;
+  max-height: 350px;
   background-color: rgba( 255, 255, 255, 0.5 );
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  padding: 5em;
+  font-family: 'Oswald', Helvetica, sans-serif;
+  font-size: 50px;
+  letter-spacing: 4px;
+  word-spacing: -8px;
+  text-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.3);
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 4em;
-  color: #bbf11b;
+  margin-top: 5px;
 }

@@ -2,7 +2,11 @@
   <h1>Partners of The Paws Button</h1>
 
   <nav>
-    <%= link_to "Add Center", new_center_path, :class =>"index_nav" %>
+    <% if @current_user.present? %>
+      <% if @current_user.admin? %>
+        <%= link_to "Add Center", new_center_path, :class =>"index_nav" %>
+      <% end %>
+    <% end %>
   </nav>
 
   <div class="list-group">

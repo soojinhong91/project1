@@ -16,7 +16,11 @@
   </div>
 
   <div class="controls">
-    <%= link_to 'Edit Center Info', edit_center_path(@center.id) %>
-    <%= link_to 'Delete this Center', center_path(@center.id), :method => 'delete' %>
+    <% if @current_user.present? %>
+      <% if @current_user.admin? %>
+        <%= link_to 'Edit Center Info', edit_center_path(@center.id) %>
+        <%= link_to 'Delete this Center', center_path(@center.id), :method => 'delete' %>
+      <% end %>
+    <% end %>
   </div>
 </div>

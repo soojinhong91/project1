@@ -1,10 +1,15 @@
 <div class="col-md-10 offset-md-1">
-  <h1>All Animals</h1>
+  <h1>All <%= params[:animal_species].present? ? params[:animal_species]+'s' : 'Animals' %></h1>
 
   <nav>
     <%= link_to 'Cats', animals_path(:animal_species => 'Cat'), :class =>"index_nav" %>
     <%= link_to 'Dogs', animals_path(:animal_species => 'Dog'), :class =>"index_nav" %>
-    <%= link_to 'Add Animal', new_animal_path, :class => "index_nav" %>
+
+    <% if @current_user.present? %>
+      <% if @current_user.admin? %>
+        <%= link_to 'Add Animal', new_animal_path, :class => "index_nav" %>
+      <% end %>
+    <% end %>
   </nav>
 
   <% @animals.each do |animal| %>
